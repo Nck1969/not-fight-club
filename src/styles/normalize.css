@@ -1,0 +1,8 @@
+input {
+    padding: unset;
+}
+
+input [type="text"] i{
+    padding-block: unset;
+    padding-inline: unset;
+}
