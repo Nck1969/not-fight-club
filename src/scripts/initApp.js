@@ -7,6 +7,11 @@ if(localStorage.getItem('currentPage') === null){
   localStorage.setItem('currentPage', "registerPage");
 }
 
+if(!user.name){
+  user.name = "Player";
+  localStorage.setItem('user', JSON.stringify(user));
+}
+
 if(user.name){
   registerPage.classList.add('hidden');
 }
@@ -46,4 +51,9 @@ if(!loses){
 const wins = localStorage.getItem('wins');
 if(!wins){
   localStorage.setItem("wins", "0");
+}
+
+const currentPage = localStorage.getItem('currentPage');
+if(!currentPage){
+  localStorage.setItem('currentPage', "registerPage");
 }
