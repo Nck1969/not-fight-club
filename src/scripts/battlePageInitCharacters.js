@@ -24,3 +24,7 @@ characterImage[1].appendChild(character2img);
 let hpValue = document.querySelectorAll('.battle-page__character-card__hp-value');
 hpValue[0].textContent = `${user.hpCurrent}/${user.hpTotal}`;
 hpValue[1].textContent = `${notDefeatedEnemies[0].hpCurrent}/${notDefeatedEnemies[0].hpTotal}`;
+
+const hpBarFill = document.querySelectorAll('.battle-page__character-card__hp-bar__fill');
+hpBarFill[0].style.width = `${user.hpCurrent / user.hpTotal * 100}%`;
+hpBarFill[1].style.width = `${notDefeatedEnemies[0].hpCurrent / notDefeatedEnemies[0].hpTotal * 100}%`;

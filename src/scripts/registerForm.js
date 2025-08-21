@@ -3,8 +3,6 @@ const registerPage = document.querySelector('.register-page');
 const registerForm = document.querySelector('.register-page__form');
 
 const currentPage = localStorage.getItem('currentPage');
-const chooseCharacterPage = document.querySelector('.choose-character-page');
-const settingsPage = document.querySelector('.settings-page');
 
 if(currentPage === "registerPage"){
   registerPage.classList.remove('hidden');
@@ -26,4 +24,5 @@ registerForm.addEventListener('submit', (event) => {
     localStorage.setItem('currentPage', "mainPage");
     mainPage.classList.remove('hidden');
     registerPage.classList.add('hidden');
+    location.reload();
 });

@@ -4,16 +4,8 @@ const characterName = document.querySelector('.choose-character__character-name'
 const characterWins = document.querySelector('.choose-character__character-wins');
 const characterLoses = document.querySelector('.choose-character__character-loses');
 
-const currentPage = localStorage.getItem('currentPage');
-const user = JSON.parse(localStorage.getItem('user'));
-const wins = localStorage.getItem('wins');
-const loses = localStorage.getItem('loses');
-
-characterName.textContent = user.name;
-characterWins.textContent = `Wins: ${wins}`;
-characterLoses.textContent = `Loses: ${loses}`;
-
 const goBackButton = document.querySelector('.choose-character-page__footer__go-back-button');
+const currentPage = localStorage.getItem('currentPage');
 const chooseCharacterPage = document.querySelector('.choose-character-page');
 const mainPage = document.querySelector('.main-page');
 
@@ -22,6 +14,14 @@ if(currentPage === "chooseCharacterPage"){
 }else{
   chooseCharacterPage.classList.add('hidden');
 }
+
+const user = JSON.parse(localStorage.getItem('user'));
+const wins = localStorage.getItem('wins');
+const loses = localStorage.getItem('loses');
+
+characterName.textContent = user.name
+characterWins.textContent = `Wins: ${wins}`;
+characterLoses.textContent = `Loses: ${loses}`;
 
 characterImage.setAttribute('src', user.imgSrc);
 
