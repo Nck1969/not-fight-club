@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Not a Fight Club</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="./src/styles/normalize.css">
+    <link rel="stylesheet" href="./src/styles/style.css">
+    <link rel="stylesheet" href="./src/styles/registerPage.css">
+    <link rel="stylesheet" href="./src/styles/mainPage.css">
+    <link rel="stylesheet" href="./src/styles/chooseCharacterPage.css">
+    <link rel="stylesheet" href="./src/styles/battlePage.css">
+
+    <script type="module" src="./src/scripts/initApp.js" defer></script>
+    <script type="module" src="src/scripts/registerForm.js" defer></script>
+    <script type="module" src="src/scripts/mainPage.js" defer></script>
+    <script type="module" src="src/scripts/settingsPage.js" defer></script>
+    <script type="module" src="src/scripts/chooseCharacterPage.js" defer></script>
+    <script type="module" src="src/scripts/battlePage.js" defer></script>
+    <script type="module" src="src/scripts/battlePageInitCharacters.js" defer></script>
+    <script type="module" src="src/scripts/battleLogic.js" defer></script>
+</head>
+<body>
+    <div class="app">
+        <div class="app__container">
+            <div class="register-page">
+                <div class="register-page__content">
+                    <div class="register-page__content__left-side">
+                        <img src="src/images/registerPage/image.png" alt="registerPage">
+                    </div>
+
+                    <div class="register-page__content__right-side">
+                        <h1>Create Your Character</h1>
+
+                        <form class="register-page__form">
+                            <label class="register-page__form__label" for="characterNameInput">Character Name</label>
+                            <input class= "register-page__form__input" id="characterNameInput" name="characterNameInput" type="text" placeholder="Enter your character name">
+                            <button class="register-page__form__submit-button">Create Character</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-page">
+                <div class="main-page__content">
+                    <div class="main-page__content__left-side">
+                        <img src="src/images/registerPage/image.png" alt="registerPage">
+                    </div>
+
+                    <div class="main-page__content__right-side">
+                        <nav class="main-page__navigation">
+                            <ul>
+                                <li class="main-page__navigation-item go-to-battle-page">
+                                    <a href="#">Start Battle</a>
+                                </li>
+                                <li class="main-page__navigation-item go-to-choose-character-page">
+                                    <a href="#">Character</a>
+                                </li>
+                                <li class="main-page__navigation-item go-to-settings-page">
+                                    <a href="#">Settings</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <div class="choose-character-page">
+                <div class="choose-character-page__content">
+                    <div class="choose-character__character">
+                        <img class="choose-character__character-image" src="src/images/chooseCharacterPage/character1.jpg" alt="character1" data-character="1">
+                        <span class="choose-character__character-name"></span>
+                        <span class="choose-character__character-wins"></span>
+                        <span class="choose-character__character-loses"></span>
+                    </div>
+
+                    <div class="choose-character__character-select">
+                        <img class="choose-character__character-select-image" src="src/images/chooseCharacterPage/character1.jpg" alt="character1">
+                        <img class="choose-character__character-select-image" src="src/images/chooseCharacterPage/character2.jpg" alt="character2">
+                        <img class="choose-character__character-select-image" src="src/images/chooseCharacterPage/character3.jpg" alt="character3">
+                        <img class="choose-character__character-select-image" src="src/images/chooseCharacterPage/character4.jpg" alt="character3">
+                        <img class="choose-character__character-select-image" src="src/images/chooseCharacterPage/character5.jpg" alt="character3">
+                        <img class="choose-character__character-select-image" src="src/images/chooseCharacterPage/character6.jpg" alt="character3">
+                        <img class="choose-character__character-select-image" src="src/images/chooseCharacterPage/character7.jpg" alt="character3">
+                        <img class="choose-character__character-select-image" src="src/images/chooseCharacterPage/character8.jpg" alt="character3">
+                        <img class="choose-character__character-select-image" src="src/images/chooseCharacterPage/character9.jpg" alt="character3">
+                    </div>
+                </div>
+                <div class="choose-character-page__footer">
+                    <button class="choose-character-page__footer__go-back-button">Go Back</button>
+                </div>
+            </div>
+
+            <div class="settings-page">
+                <div class="settings-page__content">
+                    <label class="settings-page__label" for="editCharacterNameInput">Character Name</label>
+                    <input class= "settings-page__input" id="editCharacterNameInput" name="editCharacterNameInput" type="text" disabled>
+                    <button class="settings-page__edit-button">Edit</button>
+                    <button class="settings-page__save-button hidden">Save</button>
+                </div>
+                <div class="settings-page__footer">
+                    <button class="settings-page__footer__go-back-button">Go Back</button>
+                </div>
+            </div>
+
+            <div class="battle-page">
+                <div class="battle-page__content">
+                    <div class="battle-page__character-card">
+                        <div class="battle-page__character-card__name"></div>
+                        <div class="battle-page__character-card__image"></div>
+                        <div class="battle-page__character-card__hp">
+                            <div class="battle-page__character-card__hp-bar">
+                                <div class="battle-page__character-card__hp-bar__fill"></div>
+                            </div>
+                            <div class="battle-page__character-card__hp-value"></div>
+                        </div>
+                    </div>
+
+                    <div class="battle-page__controls">
+                        <h3>Please pick one Attack zone and two Defence zones</h3>
+                        <div class="battle-page__controls__zones">
+                            <div class="zones-group">
+                                <h3>Attack Zones</h3>
+                                <div class="zones-row" id="attack-zones">
+                                    <button type="button" class="zone-btn" data-zone="head">Head</button>
+                                    <button type="button" class="zone-btn" data-zone="neck">Neck</button>
+                                    <button type="button" class="zone-btn active" data-zone="body">Body</button>
+                                    <button type="button" class="zone-btn" data-zone="belly">Belly</button>
+                                    <button type="button" class="zone-btn" data-zone="legs">Legs</button>
+                                </div>
+                            </div>
+
+                            <div class="zones-group">
+                                <h3>Defence Zones</h3>
+                                <div class="zones-row" id="defence-zones">
+                                    <button type="button" class="zone-btn" data-zone="head">Head</button>
+                                    <button type="button" class="zone-btn active" data-zone="neck">Neck</button>
+                                    <button type="button" class="zone-btn" data-zone="body">Body</button>
+                                    <button type="button" class="zone-btn active" data-zone="belly">Belly</button>
+                                    <button type="button" class="zone-btn" data-zone="legs">Legs</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="battle-page__controls__attack-button">Attack!</button>
+                    </div>
+
+                    <div class="battle-page__character-card">
+                        <div class="battle-page__character-card__name"></div>
+                        <div class="battle-page__character-card__image"></div>
+                        <div class="battle-page__character-card__hp">
+                            <div class="battle-page__character-card__hp-bar">
+                                <div class="battle-page__character-card__hp-bar__fill"></div>
+                            </div>
+                            <div class="battle-page__character-card__hp-value"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="battle-page__footer">
+                    <div class="battle-page__footer__battle-logs"></div>
+                    <button class="battle-page__footer__go-back-button">Go Back</button>
+                </div>
+
+                <div class="battle-page__battle-result-modal hidden">
+                    <div class="battle-page__battle-result-modal__content">
+                        <button class="battle-page__battle-result-modal__close-button">X</button>
+                        <h1 class="battle-page__battle-result-modal__text"></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
