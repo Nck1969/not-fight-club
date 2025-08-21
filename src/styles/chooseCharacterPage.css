@@ -1,0 +1,58 @@
+.choose-character-page {
+    width: 50%;
+    height: 60%;
+    background-color: aqua;
+    border-radius: 10px;
+}
+
+.choose-character-page__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.choose-character__character {
+    box-sizing: border-box;
+    width: 40%;
+    height: 100%;
+    padding: 20px;
+
+    background-color: blue;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.choose-character__character-image {
+    width: 200px;
+    height: 200px;
+}
+
+.choose-character__character-select {
+    box-sizing: border-box;
+    width: 60%;
+    height: 100%;
+    background-color: blueviolet;
+    padding: 20px;
+
+    .choose-character__character-select-image {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+.battle-page__character-card__hp-bar {
+    width: 100%;
+    height: 10px;
+    background-color: darkgray;
+}
+
+.battle-page__character-card__hp-bar__fill {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
