@@ -4,7 +4,7 @@ if(!user.hpCurrent && !user.hpTotal){
   user.hpTotal = 250;
   localStorage.setItem('user', JSON.stringify(user));
 }
-console.log("test", user.name)
+
 const enemies = JSON.parse(localStorage.getItem('enemies'));
 const notDefeatedEnemies = enemies.filter(enemy => !enemy.defeated);
 
@@ -20,7 +20,6 @@ characterImage[0].appendChild(character1img);
 let character2img = document.createElement('img');
 character2img.setAttribute('src', notDefeatedEnemies[0].imgSrc);
 characterImage[1].appendChild(character2img);
-
 
 let hpValue = document.querySelectorAll('.battle-page__character-card__hp-value');
 hpValue[0].textContent = `${user.hpCurrent}/${user.hpTotal}`;

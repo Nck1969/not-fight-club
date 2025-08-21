@@ -117,3 +117,44 @@
     font-size: 24px;
     cursor: pointer;
 }
+
+.log-entry {
+    padding: 10px;
+    margin: 5px 0;
+    background: #2c2c2c;
+    color: white;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.attacker {
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+.defender {
+    color: #4ecdc4;
+    font-weight: bold;
+}
+
+.damage {
+    color: #ff9f43;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.crit {
+    color: #ff4757;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 71, 87, 0.5);
+}
+
+.zone {
+    color: #a29bfe;
+    font-style: italic;
+}
+
+.block {
+    color: #74b9ff;
+    font-weight: bold;
+}
